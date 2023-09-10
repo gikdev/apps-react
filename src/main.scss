@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+$color-text-primary: #fff;
+$color-text-secondary: #bbb;
+$color-bg-1: #111;
+$color-bg-2: #222;
+$color-bg-3: #333;
+$color-bg-4: #444;
+$color-primary: dodgerblue;
+
+$icon-size: 2rem;
+$icon-color: $color-primary;
+
+$gap-s: 1rem;
+$gap-m: 2rem;
+$gap-l: 4rem;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  background-color: $color-bg-1;
+  height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+i[class*="ph"] {
+  font-size: $icon-size;
+  color: $icon-color;
+}
+#root {
+  padding: 2rem 3rem;
+  color: $color-text-primary;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  max-width: 70rem;
+  min-width: 30rem;
+  width: 90%;
+  height: 100%;
+  font-family: "Space Mono", monospace;
+  background-color: $color-bg-2;
+  font-weight: 400;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  gap: $gap-m;
+}
+
+.card {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg-3;
+  gap: $gap-m;
+  border-radius: 2rem;
+
+  &__part {
+    display: flex;
+    gap: $gap-s;
+
+    &--up {
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--down {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__image {
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5rem;
+  }
+
+  &__name {
+    margin-right: auto;
+    font-weight: 700;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: $gap-s;
+  }
+  &__seperator {
+    background: $color-text-secondary;
+    opacity: 0.5;
+    border: none;
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 1rem;
+  }
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.tag {
+  display: flex;
+  gap: $gap-s;
+  align-items: center;
+
+  &__text {
+    color: $color-text-secondary;
+    transition: color 100ms;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+}
+@media (max-width: 30rem) {
+  .card__image {
+    width: 4rem;
+  }
+}

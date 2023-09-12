@@ -44,7 +44,7 @@ i[class*="ph"] {
   max-width: 70rem;
   min-width: 30rem;
   width: 90%;
-  height: 100%;
+  min-height: 100%;
   font-family: "Space Mono", monospace;
   background-color: $color-bg-2;
   font-weight: 400;
